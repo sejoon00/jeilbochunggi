@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Phone, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
@@ -12,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -65,7 +67,7 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           {/* Mobile menu trigger */}
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
                 <Menu className="h-5 w-5" />
@@ -83,7 +85,10 @@ export default function Header() {
                 <Button
                   variant="ghost"
                   className="justify-start text-base"
-                  onClick={scrollToTop}
+                  onClick={() => {
+                    setOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   센터소개
                 </Button>
@@ -92,33 +97,44 @@ export default function Header() {
                   variant="ghost"
                   className="justify-start text-base"
                 >
-                  <a href="#brands">제품정보</a>
+                  <a href="#brands" onClick={() => setOpen(false)}>
+                    제품정보
+                  </a>
                 </Button>
                 <Button
                   asChild
                   variant="ghost"
                   className="justify-start text-base"
                 >
-                  <a href="#services">서비스안내</a>
+                  <a href="#services" onClick={() => setOpen(false)}>
+                    서비스안내
+                  </a>
                 </Button>
                 <Button
                   asChild
                   variant="ghost"
                   className="justify-start text-base"
                 >
-                  <a href="#gallery">갤러리</a>
+                  <a href="#gallery" onClick={() => setOpen(false)}>
+                    갤러리
+                  </a>
                 </Button>
                 <Button
                   asChild
                   variant="ghost"
                   className="justify-start text-base"
                 >
-                  <a href="#contact">오시는길</a>
+                  <a href="#contact" onClick={() => setOpen(false)}>
+                    오시는길
+                  </a>
                 </Button>
               </nav>
               <div className="px-5 pb-6">
                 <Button size="lg" className="w-full gap-2" asChild>
-                  <a href={`tel:${siteConfig.phone}`}>
+                  <a
+                    href={`tel:${siteConfig.phone}`}
+                    onClick={() => setOpen(false)}
+                  >
                     <Phone className="h-4 w-4" />
                     {siteConfig.phoneFormatted}
                   </a>
