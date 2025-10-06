@@ -35,8 +35,7 @@ export default function Features() {
         <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 md:p-12 text-primary-foreground">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">
-              가장 잘 듣는 선택, <br />
-              제일보청기
+              가장 잘 듣는 선택, <br className="block md:hidden" /> 제일보청기
             </h2>
             <div className="grid sm:grid-cols-2 gap-4 text-left">
               {benefits.map((benefit, index) => (

@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function Profile() {
   return (
     <section className="w-full py-12 md:py-20 bg-white">
-      <div className="container mx-auto px-4 grid gap-8 md:grid-cols-[minmax(0,640px)_1fr] items-center">
-        <div className="w-full max-w-2xl mx-auto md:mx-0 shadow-md">
+      <div className="container mx-auto px-4 grid gap-8 items-center justify-items-center">
+        <div className="w-full max-w-2xl mx-auto shadow-md">
           <Image
             src="/images/design-mode/card.jpeg"
             alt="프로필 이미지"
@@ -16,7 +16,7 @@ export default function Profile() {
             priority
           />
         </div>
-        <div className="space-y-3 text-center md:text-left">
+        <div className="space-y-3 text-center">
           <p className="text-muted-foreground text-base md:text-lg">
             30년 경력의 전문 보청기 전문가로,
           </p>
