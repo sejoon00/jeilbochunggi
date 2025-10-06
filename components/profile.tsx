@@ -18,7 +18,7 @@ export default function Profile() {
         </div>
         <div className="space-y-3 text-center">
           <p className="text-muted-foreground text-base md:text-lg">
-            30년 경력의 전문 보청기 전문가로,
+            30년 경력의 보청기 전문가로,
           </p>
           <p className="text-muted-foreground text-base md:text-lg">
             고객 환경에 딱 맞는 맞춤 솔루션을 제공합니다.
