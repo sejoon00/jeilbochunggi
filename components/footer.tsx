@@ -1,4 +1,4 @@
-import { siteConfig } from "@/config/site"
+import { siteConfig } from "@/config/site";
 
 export default function Footer() {
   return (
@@ -71,7 +71,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-4">고객센터</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -95,7 +95,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="pt-8 border-t text-center text-sm text-muted-foreground">
@@ -106,5 +106,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

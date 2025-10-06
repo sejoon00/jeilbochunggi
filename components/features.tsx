@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle2 } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle2 } from "lucide-react";
 
 const features = [
   {
@@ -17,7 +17,7 @@ const features = [
     description: "6개월 이내 분실 시 무상 재제작 서비스",
     image: "/hearing-aid-warranty-service.jpg",
   },
-]
+];
 
 const benefits = [
   "전문가의 1:1 맞춤 상담",
@@ -26,13 +26,13 @@ const benefits = [
   "편리한 출장 방문 서비스",
   "합리적인 가격과 다양한 할인",
   "철저한 사후관리 시스템",
-]
+];
 
 export default function Features() {
   return (
     <section id="products" className="py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        <div className="grid lg:grid-cols-3 gap-6 mb-16">
+        {/* <div className="grid lg:grid-cols-3 gap-6 mb-16">
           {features.map((feature, index) => (
             <Card key={index} className="overflow-hidden group hover:shadow-xl transition-shadow">
               <div className="aspect-[4/3] overflow-hidden">
@@ -48,11 +48,13 @@ export default function Features() {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </div> */}
 
         <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 md:p-12 text-primary-foreground">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold">제일보청기를 선택해야 하는 이유</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              제일보청기를 선택해야 하는 이유
+            </h2>
             <div className="grid sm:grid-cols-2 gap-4 text-left">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
@@ -65,5 +67,5 @@ export default function Features() {
         </div>
       </div>
     </section>
-  )
+  );
 }
